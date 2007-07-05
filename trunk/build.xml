@@ -1,0 +1,24 @@
+<!-- this file uses Apache Ant 1.5.3 beta 1 -->
+<project name="whiteboard" default="compile" basedir=".">	
+
+	<property name="build.dir" value="classes"/>
+	
+	<target name="clean" description="Clean output directories">
+	 	<delete dir="classes/com"/>
+	 </target>
+	
+	<target name="compile" depends="clean">
+		
+		<javac destdir="classes" source="1.5" >
+			<src path="src"/>
+		</javac>
+	 </target>
+	
+	<target name = "jar" depends ="compile">
+		<echo message ="Getting class files from classes directory"/>
+		 <jar destfile="lib/whiteboard.jar" basedir="classes"/>
+		<echo message ="jar creation done"/>
+		<copy file ="lib/whiteboard.jar" toFile ="C:\Program Files\Red5\webapps\Whiteboard\WEB-INF\lib\whiteboard.jar"/>
+		<echo message="jar copied to red5 webapps"/>
+	</target>
+</project>
