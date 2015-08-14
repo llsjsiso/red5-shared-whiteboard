@@ -1,0 +1,1 @@
+The whiteboard application contains line, circle, triangle, image, text, freehand, undo/redo, clear, background image selector sharing in real time using Red5 media server. You can choose color of drawing, thickness, and border color as well.
